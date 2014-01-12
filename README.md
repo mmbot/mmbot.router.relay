@@ -4,7 +4,10 @@ This project implements a router for [mmbot](https://github.com/mmbot/mmbot) tha
 
 
 ## Installation
-* From your mmbot working directory run nuget install mmbot.router.relay -o packages
+* From your mmbot working directory run 
+```
+nuget install mmbot.router.relay -o packages
+```
 * In your mmbot.ini file add the following section
 
 ```
