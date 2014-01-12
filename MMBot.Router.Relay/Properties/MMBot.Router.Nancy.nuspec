@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>MMBot.Router.Nancy</id>
+        <id>MMBot.Router.Relay</id>
         <version>0.1.0</version>
         <authors>Peter Goodman</authors>
         <owners>Peter Goodman</owners>
@@ -12,5 +12,26 @@
         <releaseNotes>Initial pre-release version.</releaseNotes>
         <copyright>Copyright 2013</copyright>
         <tags>hubot mmbot petegoo chat robot bot nancy router</tags>
+      <dependencies>
+        <dependency id="Common.Logging" version="2.1.2" />
+        <dependency id="Common.Logging.Log4Net" version="2.0.1" />
+        <dependency id="HtmlAgilityPack" version="1.4.6" />
+        <dependency id="log4net" version="1.2.10" />
+        <dependency id="Microsoft.AspNet.SignalR.Client" version="2.0.1" />
+        <dependency id="Microsoft.Owin" version="2.0.2" />
+        <dependency id="Microsoft.Owin.Host.HttpListener" version="2.0.2" />
+        <dependency id="Microsoft.Owin.Hosting" version="2.0.2" />
+        <dependency id="Microsoft.Owin.Testing" version="2.0.2" />
+        <dependency id="Microsoft.Web.Xdt" version="1.0.0" />
+        <dependency id="MMBot.Core" version="0.9.3" />
+        <dependency id="MMBot.Router.Nancy" version="0.9.3.1" />
+        <dependency id="Nancy" version="0.21.1" />
+        <dependency id="Nancy.Bootstrappers.Autofac" version="0.21.1" />
+        <dependency id="Nancy.Owin" version="0.21.1" />
+        <dependency id="Newtonsoft.Json" version="5.0.8" />
+        <dependency id="Owin" version="1.0" />
+        <dependency id="ScriptCs.Contracts" version="0.8.1" />
+        <dependency id="SignalR.Owin.Relay.Client" version="0.1.2" />
+        </dependencies>
     </metadata>
 </package>
