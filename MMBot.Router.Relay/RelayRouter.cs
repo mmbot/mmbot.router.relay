@@ -5,19 +5,20 @@ using SignalR.Owin.Relay.Client;
 
 namespace MMBot.Router.Relay
 {
-    public class RelayRouter : NancyRouter
+    public class RelayRouter : NancyRouter, IMustBeInitializedWithRobot
     {
-        private Robot _robot;
         private int _port;
         private bool _isConfigured;
         private string _hostname;
         private RelayClient _client;
 
-        public override void Configure(Robot robot, int port)
+        public override void Configure(int port)
         {
+            base.Configure(port);
+
             _port = port;
-            _robot = robot;
-            _hostname = robot.GetConfigVariable("MMBOT_ROUTER_HOSTNAME");
+            
+            _hostname = Robot.GetConfigVariable("MMBOT_ROUTER_HOSTNAME");
 
             if (string.IsNullOrEmpty(_hostname))
             {
@@ -39,11 +40,11 @@ namespace MMBot.Router.Relay
 
                 _client.Start();
 
-                _robot.Logger.Info("The relay router is connected to " + relayUri);
+                Robot.Logger.Info("The relay router is connected to " + relayUri);
             }
             catch (Exception e)
             {
-                _robot.Logger.Error("Could not connect to relay router " + relayUri, e);
+                Robot.Logger.Error("Could not connect to relay router " + relayUri, e);
             }
         }
 
